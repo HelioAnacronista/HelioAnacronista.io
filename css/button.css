@@ -1,0 +1,46 @@
+
+.button {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.5rem 2.2rem;
+    font-size: 1.5rem;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: #F1FAEE;
+    overflow: hidden;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    min-width: 4rem;
+    justify-content: center;
+    align-items: center;
+    transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
+    box-shadow: 20px;
+}
+
+.button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 5px solid #ffffff;
+}
+
+.button:hover, .button:focus {
+    color:#393C40;
+    background: #ffffff;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 700px) {
+
+    .button {
+        font-size: 1.2rem;
+    }
+}

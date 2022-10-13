@@ -1,0 +1,115 @@
+.container-technologies {
+	max-width: 90%;
+ }
+
+ .container-technologies h3 {
+	text-align: center;
+ }
+
+ .container-technologies .border {
+	width: 100px;
+	height: 3px;
+	background: #ffffff;
+	margin: 40px auto;
+}
+
+.container-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+	text-align: center;
+	grid-gap: 1rem;
+	padding: 1rem 60px;
+	font-size: 1.2em;
+}
+
+.tec-box {
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.tec-box:hover > .tec-title:after, 
+.tec-box:hover > .tec-title:before {
+	width: 35px;
+}
+
+.tec-box:hover {
+	transform: translateY(-10px);
+}
+
+.tec-box span {
+	font-weight: 600;
+}
+
+.tec-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+	font-size: 1.2rem;
+}
+
+.tec-title:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	width: 0;
+	height: 4px;
+	border-radius: 2px 0 0 2px;
+	background-color: #ffffff;
+	transition: .5s;
+}
+
+.tec-title:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 4px;
+	border-radius: 0 2px 2px 0;
+	background-color: #ffffff;
+	transition: .5s;
+}
+
+.tec-title h4 {
+	margin-top: 0.5rem;
+	font-size: 1.5rem;
+}
+
+.tec-icon {
+	width: 70px;
+	z-index: 2;
+}
+
+.tec-img {
+	width: 90px;
+	height: 90px;
+	position: relative;
+	border-radius: 45px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+}
+
+@media screen and (max-width: 990px) {
+	.container-grid {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 2rem 20px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.container-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.tec-title h4 {
+		font-size: 1.2rem;
+	}
+}
